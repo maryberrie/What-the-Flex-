@@ -3,4 +3,6 @@ CSSI Project
 
 
 Authors:
-Justin Kwon - 
+Justin Kwon -
+Chang Xu -
+Cynthia Serrano - 
