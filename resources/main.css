@@ -1,13 +1,20 @@
 h1{
   font-weight:bold;
   text-align: center;
+  font-family:fantasy;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: sans-serif;
+  font-size: 14pt;
+  text-align: left;
+  padding-left: 160px;
+}
+#img1{
+  max-height: 200px;
 }
 
 body{
   background-color: #FFE7FC;
-  font-family: fantasy;
-}
-
-#img1{
-  max-height: 200px;
 }
