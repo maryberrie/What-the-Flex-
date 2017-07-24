@@ -11,6 +11,13 @@ from google.appengine.ext import ndb
 
 env = jinja2.Environment(loader = jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
 
+class information(ndb.Model):
+    Name = ndb.StringProperty()
+    Street = ndb.StringProperty()
+    City = ndb.StringProperty()
+    State = ndb.StringProperty()
+    Phonenumber = ndb.StringProperty()
+
 class Page(webapp2.RequestHandler):
     def get(self):
 
@@ -18,6 +25,9 @@ class Page(webapp2.RequestHandler):
 
         self.response.out.write(template.render())
 
+class store_property(webapp2.RequestHandler):
+    def post(self):
+        information_key = ndb.Key('information')
 
 
 
