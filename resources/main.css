@@ -12,8 +12,16 @@ p, form {
   padding-left: 200px;
 }
 
-#img1{
-  max-height: 200px;
+
+img{
+  max-height: 300px;
+}
+.birds div{
+display: flex;
+flex-grow: 1;
+padding: 5px;
+margin: 10px;
+justify-content: center;
 }
 
 body{
