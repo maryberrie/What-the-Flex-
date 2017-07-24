@@ -7,3 +7,7 @@ body{
   background-color: #FFE7FC;
   font-family: fantasy;
 }
+
+#img1{
+  max-height: 200px;
+}
