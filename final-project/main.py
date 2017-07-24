@@ -16,8 +16,10 @@
 #
 import jinja2
 import os
-import 
+import
 import webapp2
+
+env = jinja2.Environment(loader=jinja2.FileSystemLoader("templates"))
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
