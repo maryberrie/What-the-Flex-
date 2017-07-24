@@ -15,7 +15,7 @@ class Page(webapp2.RequestHandler):
     def get(self):
 
         template = env.get_template('page.html')
-        self.response.out.write('hello')
+        self.response.out.write('test')
 
 
 
