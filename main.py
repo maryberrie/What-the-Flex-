@@ -16,7 +16,8 @@ class Information(ndb.Model):
     street = ndb.StringProperty()
     city = ndb.StringProperty()
     state = ndb.StringProperty()
-    phonenumber = ndb.StringProperty()
+    zipcode = ndb.IntegerProperty()
+    phonenumber = ndb.IntegerProperty()
 
 class Page(webapp2.RequestHandler):
     def get(self):
@@ -30,9 +31,14 @@ class store_property(webapp2.RequestHandler):
         information_key = ndb.Key('information')
         information = information_key.get()
         if not information:
-            information = Information(name = self.request.get('name'), street = self.request.get('street'),
-                                      city = self.request.get(), state = self.request.get('state'),
-                                      phonenumber = self.request.get('number1'),self.request.get('number2'), self.request.get('number3'))
+            information = Information(name = self.request.get('name'),
+                                      street = self.request.get('street'),
+                                      city = self.request.get('city'),
+                                      state = self.request.get('state'),
+                                      zipcode = long(self.request.get('zipcode')),
+                                      phonenumber = long(self.request.get('number1')),
+                                                    long(self.request.get('number2')),
+                                                    long(self.request.get('number3')))
             information.key = information_key
             information.put()
         template = env.get_template('data.html')
@@ -42,5 +48,6 @@ class store_property(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
         ('/', Page),
+        (''/store_property', store_property)
 ], debug = True
 )
