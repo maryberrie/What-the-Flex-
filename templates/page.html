@@ -14,6 +14,32 @@
     <h1>Damsel in Distress</h1>
 <!-- Content -->
     <p>(storyline)</p>
+
+<!-- Form -->
+    <form method="post" action="/store_info">
+      <p><ul>
+        <li>Name:
+            <input type="text" name="name"/></li>
+        <li>Street:
+            <input type="text" name="street"/></li>
+        <li>City:
+            <input type="text" name="city"/></li>
+        <li>State:
+            <input type="text" name="state"/></li>
+        <li>Phone Number:
+            <input type="text" name="number1"/>-
+            <input type="text" name="number2"/>-
+            <input type="text" name="number3"/></li>
+      </ul></p>
+            <input type="submit" name="Submit Info"/>
+            <button onclick="myFunction()">Reload page</button>
+              <script>
+                function myFunction() {
+                  location.reload();
+                }
+              </script>
+    </form>
+
 <!-- Footer -->
   <div align="center"><img id="img1" src="../resources/birdheader.png">
                       <img id="img1" src="../resources/birdheader.png">
