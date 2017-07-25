@@ -15,21 +15,13 @@ p, form {
 }
 .transbox {
     margin: 30px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid black;
-    opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+    z-index:1;
 }
 
-.transbox p {
-    margin: 5%;
-    font-weight: bold;
-    color: #000000;
-}
-.transbox img{
 
 
-}
 img{
   max-height: 400px;
 
@@ -50,4 +42,5 @@ body{
   background-attachment: fixed;
   padding-left: 200px;
   padding-right: 200px;
+  z-index: 1;
 }
