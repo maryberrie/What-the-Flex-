@@ -19,6 +19,35 @@ class Information(ndb.Model):
     zipcode = ndb.IntegerProperty()
     phonenumber = ndb.IntegerProperty()
 
+class Begin(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('begin.html')
+        self.response.out.write(template.render())
+
+class Begin2(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('begin2.html')
+        self.response.out.write(template.render())
+
+class Creepy(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('1creepy.html')
+        self.response.out.write(template.render())
+
+class Sunshine(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('1sunshine.html')
+        self.response.out.write(template.render())
+
+class Tree(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('1tree.html')
+        self.response.out.write(template.render())
+
+class Companion(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('2companion.html')
+        self.response.out.write(template.render())
 
 class Data(webapp2.RequestHandler):
     def get(self):
@@ -59,7 +88,15 @@ class InformationPage(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 
+
+
 app = webapp2.WSGIApplication([
-        ('/', InformationPage),
-        ('/data', Data)
+        ('/', Begin),
+        ('/begin2', Begin2),
+        ('/dark', Creepy),
+        ('/sunshine', Sunshine),
+        ('/tree', Tree),
+        ('/poro', InformationPage),
+        ('/companion', Companion)
+
 ], debug = True)

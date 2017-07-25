@@ -4,9 +4,10 @@
     <link type="text/css" rel="stylesheet" href="../resources/main.css"</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <script type = "text/javascript" src = "../resources/main.js"> </script>
-  </head>
+    <script src="main.js"></script>
   <body>
+  </head>
+
 <!-- Header
   <section class="birds">
       <img src="../resources/birdheader.png">
@@ -14,30 +15,36 @@
                       <img  src="../resources/birdheader.png">
   </section>
 -->
+
     <h1>Damsel in Distress</h1>
 <!-- Content -->
-    <p>(storyline)</p>
-    <p>What is your reponse to this?</p>
+  <section class="transbox">
+    <p>You go towards the figure </p>
 
+    <form method="post" id="survey">
+      <p>What do you say to the Poro?
+        <input type="text" name="Enter"/>
+
+    <a href="2companion.html">Speak to the Poro</a>
 <!-- Form -->
-    <form method="post" action="/data">
-      <p><ul>
-        <li>Name:
-            <input type="text" name="name"/></li>
-        <li>Street:
-            <input type="text" name="street"/></li>
-        <li>City:
-            <input type="text" name="city"/></li>
-        <li>State:
-            <input type="text" name="state"/></li>
-        <li>Zip Code:
-            <input type="text" name="zipcode"/></li>
-        <li>Phone Number:
-            <input type="text" name="number"/></li>
-      </ul></p>
+    <form method="post" action="/data" id  = "survey">
+      <p>
+        Name:
+            <input type="text" name="name"/><br>
+        Street:
+            <input type="text" name="street"/><br>
+        City:
+            <input type="text" name="city"/><br>
+        State:
+            <input type="text" name="state"/><br>
+        Zip Code:
+            <input type="text" name="zipcode"/><br>
+        Phone Number:
+            <input type="text" name="number"/><br>
+      </p>
             <input type="submit" name="Submit Info"/>
             <input type = "button" value = "Reload page" id = "reload"/>
-            <input type="button"  value="Go to Google" id ="test"/>
+            <input type="button"  value="Hide" id ="hide"/>
               <script>
                 function myFunction() {
                   location.reload();
@@ -45,12 +52,25 @@
               </script>
     </form>
 
+    <form>
+      <input type = "button" value = "show" id = "show"/>
+    </form>
+
 <!-- Footer
   <section class="birds">
       <img src="../resources/birdheader.png">
                       <img src="../resources/birdheader.png">
                       <img src="../resources/birdheader.png">
+>>>>>>> 840fd7f827b6f008ef47f3cc92a62d2caff37287
   </section>
--->
+
+
+    <!-- Footer
+      <section class="birds">
+          <img src="../resources/birdheader.png">
+                          <img src="../resources/birdheader.png">
+                          <img src="../resources/birdheader.png">
+      </section>
+    -->
   </body>
 </html>
