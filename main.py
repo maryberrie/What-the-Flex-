@@ -83,7 +83,9 @@ class Data(webapp2.RequestHandler):
 
 class InformationPage(webapp2.RequestHandler):
     def get(self):
-
+        if  == :
+            template = env.get_template('form.html')
+            self.response.out.write(template.render())
         template = env.get_template('page.html')
         self.response.out.write(template.render())
 
