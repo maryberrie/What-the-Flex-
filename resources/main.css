@@ -12,6 +12,7 @@ p, form {
   word-spacing: 5px;
   padding-left: 200px;
   padding-right: 200px;
+  visibility: visible;
 }
 
 img{
