@@ -79,15 +79,16 @@ class Data(webapp2.RequestHandler):
         }
         template = env.get_template('data.html')
 
-        self.redirect('/')
+        self.redirect('/Companion')
 
 class InformationPage(webapp2.RequestHandler):
     def get(self):
-        if  == :
+        if  self.request.get('Enter').lower() == 'butterfly':
+            template = env.get_template('page.html')
+            self.response.out.write(template.render())
+        else:
             template = env.get_template('form.html')
             self.response.out.write(template.render())
-        template = env.get_template('page.html')
-        self.response.out.write(template.render())
 
 
 
