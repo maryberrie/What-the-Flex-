@@ -28,7 +28,7 @@ class Page(webapp2.RequestHandler):
 
 class store_property(webapp2.RequestHandler):
     def post(self):
-        information_key = ndb.Key('information',)
+        information_key = ndb.Key('Information',self.request.get('name') )
         information = information_key.get()
         if not information:
             information = Information(name = self.request.get('name'),
@@ -36,13 +36,10 @@ class store_property(webapp2.RequestHandler):
                                       city = self.request.get('city'),
                                       state = self.request.get('state'),
                                       zipcode = long(self.request.get('zipcode')),
-                                      phonenumber = long(self.request.get('number1')),
-                                                    long(self.request.get('number2')),
-                                                    long(self.request.get('number3')))
-            information.key = information_key
+                                      phonenumber = long(self.request.get('number')))
+            information_key = information.key
             information.put()
         template = env.get_template('data.html')
-<<<<<<< HEAD
         variables = {
             "information": information,
         }
@@ -58,10 +55,6 @@ class Page(webapp2.RequestHandler):
             "information": information,
         }
         self.response.out.write(template.render(variables))
-=======
-        self.response.out.write.(template.render())
-
->>>>>>> 68ae4ce208dfd8ee9b20b1f0469f45bdd134a113
 
 
 app = webapp2.WSGIApplication([
