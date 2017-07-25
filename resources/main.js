@@ -6,10 +6,7 @@ function hide(){
 }
 
 
-
-
 function setup(){
-  $("#show").click(show);
   $("#hide").click(hide);
 }
 
