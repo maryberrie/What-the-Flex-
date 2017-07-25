@@ -26,7 +26,7 @@ class Page(webapp2.RequestHandler):
 
         self.response.out.write(template.render())
 
-class store_property(webapp2.RequestHandler):
+class Data(webapp2.RequestHandler):
     def get(self):
 
         query = Information.query().order(-Information.name)
@@ -56,9 +56,9 @@ class store_property(webapp2.RequestHandler):
         }
         template = env.get_template('data.html')
 
-        self.redirect('/store_property')
+        self.redirect('/')
 
-class Page(webapp2.RequestHandler):
+class InformationPage(webapp2.RequestHandler):
     def get(self):
 
         template = env.get_template('page.html')
@@ -66,6 +66,6 @@ class Page(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-        ('/', Page),
-        ('/store_property', store_property)
+        ('/', InformationPage),
+        ('/data', Data)
 ], debug = True)
