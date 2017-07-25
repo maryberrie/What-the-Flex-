@@ -61,7 +61,6 @@ class store_property(webapp2.RequestHandler):
 class Page(webapp2.RequestHandler):
     def get(self):
 
-
         template = env.get_template('page.html')
         self.response.out.write(template.render())
 
