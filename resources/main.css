@@ -14,9 +14,26 @@ p, form {
   padding-right: 200px;
   visibility: visible;
 }
+.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
 
+.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+.transbox img{
+
+
+}
 img{
   max-height: 400px;
+
 }
 
 .birds {
@@ -32,4 +49,6 @@ body{
   background-image: url("background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-left: 200px;
+  padding-right: 200px;
 }
