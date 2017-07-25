@@ -39,7 +39,7 @@ class Data(webapp2.RequestHandler):
 
 
     def post(self):
-        information_key = ndb.Key('Information', self.request.get('name'))
+        information_key = ndb.Key('Information',self.request.get('name'))
         information = information_key.get()
         if not information:
             information = Information(name = self.request.get('name'),
@@ -48,6 +48,7 @@ class Data(webapp2.RequestHandler):
                                       state = self.request.get('state'),
                                       zipcode = long(self.request.get('zipcode')),
                                       phonenumber = long(self.request.get('number')))
+
             information.key = information_key
             information.put()
         variables = {
@@ -62,10 +63,7 @@ class Page(webapp2.RequestHandler):
 
 
         template = env.get_template('page.html')
-
         self.response.out.write(template.render())
-
-
 
 
 app = webapp2.WSGIApplication([
