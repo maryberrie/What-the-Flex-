@@ -42,7 +42,7 @@ class store_property(webapp2.RequestHandler):
             information.key = information_key
             information.put()
         template = env.get_template('data.html')
-        self.response.out.write.(template.render())
+        self.response.out.write(template.render())
 
 
 
