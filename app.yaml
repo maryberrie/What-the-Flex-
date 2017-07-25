@@ -4,8 +4,7 @@ threadsafe: true
 
 handlers:
 - url: /resources
-  static_dir: resources
-
+  static_dir: resources/
 
 - url: /favicon\.ico
   static_files: favicon.ico
