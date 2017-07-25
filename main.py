@@ -35,16 +35,8 @@ class store_property(webapp2.RequestHandler):
         template = env.get_template('data.html')
         variables = {
             "information": information,
-            "name": name,
-            "street": street,
-            "city": city,
-            "state": state,
-            "zipcode": zipcode,
-            "phonenumber": phonenumber
         }
         self.response.out.write(template.render(variables))
-
-
 
 class Page(webapp2.RequestHandler):
     def get(self):
