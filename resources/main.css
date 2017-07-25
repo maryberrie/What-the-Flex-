@@ -17,19 +17,21 @@ p, form {
     margin: 30px;
     background-color: #ffffff;
     border: 1px solid black;
-    opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    z-index:1;
 }
-
+.transbox img{
+  z-index:3;
+}
 .transbox p {
     margin: 5%;
     font-weight: bold;
     color: #000000;
+    z-index:2;
 }
-.transbox img{
 
 
-}
 img{
   max-height: 400px;
 
@@ -50,4 +52,5 @@ body{
   background-attachment: fixed;
   padding-left: 200px;
   padding-right: 200px;
+  z-index: 1;
 }
