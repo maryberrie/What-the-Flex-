@@ -45,5 +45,7 @@ img{
 }
 
 body{
-  background-color: #FFE7FC;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
