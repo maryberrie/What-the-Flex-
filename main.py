@@ -56,9 +56,9 @@ class Data(webapp2.RequestHandler):
         }
         template = env.get_template('data.html')
 
-        self.redirect('/data')
+        self.redirect('/')
 
-class Page(webapp2.RequestHandler):
+class InformationPage(webapp2.RequestHandler):
     def get(self):
 
 
@@ -67,6 +67,6 @@ class Page(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-        ('/', Page),
+        ('/', InformationPage),
         ('/data', Data)
 ], debug = True)
