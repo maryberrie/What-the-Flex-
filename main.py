@@ -77,7 +77,7 @@ class Data(webapp2.RequestHandler):
         variables = {
             "information": information
         }
-        template = env.get_template('data.html')
+        template = env.get_template('page.html')
 
         self.redirect('/Companion')
 
