@@ -19,9 +19,16 @@ class Information(ndb.Model):
     zipcode = ndb.IntegerProperty()
     phonenumber = ndb.IntegerProperty()
 
+class Page(webapp2.RequestHandler):
+    def get(self):
+
+        template = env.get_template('page.html')
+
+        self.response.out.write(template.render())
+
 class store_property(webapp2.RequestHandler):
     def post(self):
-        information_key = ndb.Key('Information', self.request.get('name'))
+        information_key = ndb.Key('information',)
         information = information_key.get()
         if not information:
             information = Information(name = self.request.get('name'),
@@ -29,33 +36,14 @@ class store_property(webapp2.RequestHandler):
                                       city = self.request.get('city'),
                                       state = self.request.get('state'),
                                       zipcode = long(self.request.get('zipcode')),
-                                      phonenumber = long(self.request.get('number')))
-        information.key = information_key
-        information.put()
+                                      phonenumber = long(self.request.get('number1')),
+                                                    long(self.request.get('number2')),
+                                                    long(self.request.get('number3')))
+            information.key = information_key
+            information.put()
         template = env.get_template('data.html')
-        variables = {
-            "information": information,
-            "name": name,
-            "street": street,
-            "city": city,
-            "state": state,
-            "zipcode": zipcode,
-            "phonenumber": phonenumber
-        }
-        self.response.out.write(template.render(variables))
+        self.response.out.write.(template.render())
 
-
-
-class Page(webapp2.RequestHandler):
-    def get(self):
-        query = Information.query().order(-Information.name)
-        information = query.fetch()
-
-        template = env.get_template('page.html')
-        variables = {
-            "information": information,
-        }
-        self.response.out.write(template.render(variables))
 
 
 app = webapp2.WSGIApplication([
