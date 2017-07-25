@@ -4,7 +4,7 @@
     <link type="text/css" rel="stylesheet" href="../resources/main.css"</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <script src="main.js"></script>
+    <script type = "text/javascript" src = "../resources/main.js"> </script>
   </head>
   <body>
 <!-- Header
@@ -17,6 +17,7 @@
     <h1>Damsel in Distress</h1>
 <!-- Content -->
     <p>(storyline)</p>
+    <p>What is your reponse to this?</p>
 
 <!-- Form -->
     <form method="post" action="/data">
@@ -35,7 +36,8 @@
             <input type="text" name="number"/></li>
       </ul></p>
             <input type="submit" name="Submit Info"/>
-            <button onclick="myFunction()">Reload page</button>
+            <input type = "button" value = "Reload page" id = "reload"/>
+            <input type="button"  value="Go to Google" id ="test"/>
               <script>
                 function myFunction() {
                   location.reload();
