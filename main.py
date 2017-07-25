@@ -42,8 +42,30 @@ class store_property(webapp2.RequestHandler):
             information.key = information_key
             information.put()
         template = env.get_template('data.html')
+<<<<<<< HEAD
         self.response.out.write(template.render())
+=======
+<<<<<<< HEAD
+        variables = {
+            "information": information,
+        }
+        self.response.out.write(template.render(variables))
 
+class Page(webapp2.RequestHandler):
+    def get(self):
+        query = Information.query().order(-Information.name)
+        information = query.fetch()
+
+        template = env.get_template('page.html')
+        variables = {
+            "information": information,
+        }
+        self.response.out.write(template.render(variables))
+=======
+        self.response.out.write.(template.render())
+>>>>>>> be0504258e84489e4b833c0426c2b0bd2beaab62
+
+>>>>>>> 68ae4ce208dfd8ee9b20b1f0469f45bdd134a113
 
 
 app = webapp2.WSGIApplication([
