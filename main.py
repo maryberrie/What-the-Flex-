@@ -44,6 +44,11 @@ class Tree(webapp2.RequestHandler):
         template = env.get_template('1tree.html')
         self.response.out.write(template.render())
 
+class Companion(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('2companion.html')
+        self.response.out.write(template.render())
+
 class Data(webapp2.RequestHandler):
     def get(self):
 
@@ -92,6 +97,6 @@ app = webapp2.WSGIApplication([
         ('/sunshine', Sunshine),
         ('/tree', Tree),
         ('/poro', InformationPage),
-
+        ('/companion', Companion)
 
 ], debug = True)

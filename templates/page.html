@@ -19,25 +19,29 @@
     <h1>Damsel in Distress</h1>
 <!-- Content -->
   <section class="transbox">
-    <p>(storyline)</p>
-    <p>What is your reponse to this?</p>
+    <p>You go towards the figure </p>
 
+    <form method="post" id="survey">
+      <p>What do you say to the Poro?
+        <input type="text" name="Enter"/>
+
+    <a href="2companion.html">Speak to the Poro</a>
 <!-- Form -->
     <form method="post" action="/data" id  = "survey">
-      <p><ul>
-        <li>Name:
-            <input type="text" name="name"/></li>
-        <li>Street:
-            <input type="text" name="street"/></li>
-        <li>City:
-            <input type="text" name="city"/></li>
-        <li>State:
-            <input type="text" name="state"/></li>
-        <li>Zip Code:
-            <input type="text" name="zipcode"/></li>
-        <li>Phone Number:
-            <input type="text" name="number"/></li>
-      </ul></p>
+      <p>
+        Name:
+            <input type="text" name="name"/><br>
+        Street:
+            <input type="text" name="street"/><br>
+        City:
+            <input type="text" name="city"/><br>
+        State:
+            <input type="text" name="state"/><br>
+        Zip Code:
+            <input type="text" name="zipcode"/><br>
+        Phone Number:
+            <input type="text" name="number"/><br>
+      </p>
             <input type="submit" name="Submit Info"/>
             <input type = "button" value = "Reload page" id = "reload"/>
             <input type="button"  value="Hide" id ="test"/>
