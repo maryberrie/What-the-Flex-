@@ -21,36 +21,14 @@
   <section class="transbox">
     <p>You go towards the figure </p>
 
-    <form method="post" id="survey">
+    <form method="post" action id="survey">
       <p>What do you say to the Poro?
         <input type="text" name="Enter"/>
 
     <a href="2companion.html">Speak to the Poro</a>
 <!-- Form -->
-    <form method="post" action="/data" id  = "survey">
-      <p>
-        Name:
-            <input type="text" name="name"/><br>
-        Street:
-            <input type="text" name="street"/><br>
-        City:
-            <input type="text" name="city"/><br>
-        State:
-            <input type="text" name="state"/><br>
-        Zip Code:
-            <input type="text" name="zipcode"/><br>
-        Phone Number:
-            <input type="text" name="number"/><br>
-      </p>
-            <input type="submit" name="Submit Info"/>
-            <input type = "button" value = "Reload page" id = "reload"/>
-            <input type="button"  value="Hide" id ="hide"/>
-              <script>
-                function myFunction() {
-                  location.reload();
-                }
-              </script>
-    </form>
+    {% include form.html%}
+
 
     <form>
       <input type = "button" value = "show" id = "show"/>
