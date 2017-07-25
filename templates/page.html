@@ -4,7 +4,7 @@
     <link type="text/css" rel="stylesheet" href="../resources/main.css"</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <script src="main.js"></script>
+    <script type = "text/javascript" src = "../resources/main.js"> </script>
   </head>
   <body>
 <!-- Header
@@ -35,8 +35,8 @@
             <input type="text" name="number"/></li>
       </ul></p>
             <input type="submit" name="Submit Info"/>
-            <button onclick="myFunction()">Reload page</button>
-            <!-- this will be a button that links to the next page <input type="button" onclick="location.href='http://google.com';" value="Go to Google" />-->
+            <input type = "button" value = "Reload page" id = "reload"/>
+            <input type="button"  value="Go to Google" id ="test"/>
               <script>
                 function myFunction() {
                   location.reload();
