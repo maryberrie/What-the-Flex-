@@ -30,6 +30,12 @@ p {
   padding-left: 160px;
   padding-right: 160px;
 }
+
+
+
+#survey{
+  display: none;
+}
 .transbox {
     margin: 30px;
     min-width: 1000px;
