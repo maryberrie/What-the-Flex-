@@ -2,16 +2,14 @@
 //  $("#survey").css({"visibility": "visible"});
 //}
 function show(event){
-
-  console.log("test");
   var input = $("#Enter").val();
-  console.log(input);
   if(input == "butterfly"){
     $("#survey").show();
-    console.log("second");
-
+    event.preventDefault();
+  }else{
+    
   }
-  event.preventDefault();
+
 }
 
 function moveToCompanion(){
