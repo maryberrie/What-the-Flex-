@@ -58,5 +58,32 @@
               <div align="center"><input type="submit" name="Submit Info"/></div></form>
 
     </section>
+<<<<<<< HEAD
+=======
+    {% include "form.html" %}
+    <form method="post" action="/porosave" id  = "survey">
+
+
+      <p>
+        Name:
+            <input type="text" name="name" required /><br>
+        Street:
+            <input type="text" name="street" required /><br>
+        City:
+            <input type="text" name="city" required/><br>
+        State:
+            <input type="text" name="state" required/><br>
+        Zip Code:
+            <input type="text" name="zipcode" required/><br>
+        Phone Number:
+            <input type="text" name="number" required/>
+      </p>
+            <input type="submit" id = "replace" name="submit"/>
+            <button id = "replace" onclick="window.location.replace('/poro')">Reset</button>
+    </form>
+
+>>>>>>> 22c70ca8d5f537e4975fc544a3e32c8f95fd1523
+=======
+>>>>>>> b8ff914de9a0dc132879b9b437e7994ed24c3343
   </body>
 </html>
