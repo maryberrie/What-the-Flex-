@@ -18,13 +18,11 @@
           To your surprise, it really is a Poro!
         </p>
 
-      <form method="get" action id="survey">
+      <form method="get" id ="input">
           <p>What do you say to the Poro?
-            <input type="text" name="Enter"/>
+            <input type="text" id="Enter"/>
           </p>
       </form>
-
-      <p><a href="/companion">Speak to the Poro</a></p>
 
       <form method="post" action="/poro" id  = "survey">
 
@@ -56,8 +54,9 @@
               <input type="radio" name="code" value="daycare">Daycare Playcare
               <input type="radio" name="code" value="shop">Whole Veggies<br>
         </p>
+              <div align="center"><button onclick="window.location.href='/poro'">Leave Form</button></div>
               <div align="center"><input type="submit" name="Submit Info"/></div></form>
-        <div align="center"><button onclick="window.location.href='/poro'">Leave Form</button></div>
+
     </section>
   </body>
 </html>
