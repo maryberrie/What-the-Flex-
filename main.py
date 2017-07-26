@@ -49,38 +49,6 @@ class Companion(webapp2.RequestHandler):
         template = env.get_template('2companion.html')
         self.response.out.write(template.render())
 
-class Data(webapp2.RequestHandler):
-    def get(self):
-
-        query = Information.query().order(-Information.name)
-        information = query.fetch()
-        template = env.get_template('data.html')
-        variables = {
-            "information": information
-        }
-        self.response.out.write(template.render(variables))
-
-
-    def post(self):
-        information_key = ndb.Key('Information',self.request.get('name'))
-        information = information_key.get()
-        if not information:
-            information = Information(name = self.request.get('name'),
-                                      street = self.request.get('street'),
-                                      city = self.request.get('city'),
-                                      state = self.request.get('state'),
-                                      zipcode = long(self.request.get('zipcode')),
-                                      phonenumber = long(self.request.get('number')))
-
-            information.key = information_key
-            information.put()
-        variables = {
-            "information": information
-        }
-        template = env.get_template('page.html')
-
-        self.redirect('/Companion')
-
 class InformationPage(webapp2.RequestHandler):
     def get(self):
         if  self.request.get('Enter').lower() == 'butterfly':
@@ -89,9 +57,11 @@ class InformationPage(webapp2.RequestHandler):
         else:
             template = env.get_template('form.html')
             self.response.out.write(template.render())
+
+
+class AddInfo(webapp2.RequestHandler):
     def post(self):
-        information_key = ndb.Key('Information',self.request.get('name'))
-        logging.info(self.request.get('name'))
+        information_key = ndb.Key('Information', self.request.get('name'))
         information = information_key.get()
         if not information:
             information = Information(name = self.request.get('name'),
@@ -99,15 +69,20 @@ class InformationPage(webapp2.RequestHandler):
                                       city = self.request.get('city'),
                                       state = self.request.get('state'),
                                       zipcode = long(self.request.get('zipcode')),
-                                      phonenumber = long(self.request.get('number')))
+                                      phonenumber = long(self.request.get('number'))
+                                      )
+        """else:
+            information.name = self.request.get('name')
+            information.street = self.request.get('street')
+            information.city = self.request.get('city')
+            information.state = self.request.get('state')
+            information.zipcode = long(self.request.get('zipcode'))
+            information.phonenumber = long(self.request.get('number'))"""
 
-            information.key = information_key
-            information.put()
-        variables = {
-            "information": information
-        }
-        template = env.get_template('page.html')
-        self.response.out.write(template.render())
+        information.key = information_key
+        information.put()
+
+        self.redirect('/poro')
 
 
 
@@ -119,6 +94,6 @@ app = webapp2.WSGIApplication([
         ('/sunshine', Sunshine),
         ('/tree', Tree),
         ('/poro', InformationPage),
-        ('/companion', Companion)
-
+        ('/companion', Companion),
+        ('/porosave', AddInfo)
 ], debug = True)
