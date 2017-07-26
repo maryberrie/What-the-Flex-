@@ -63,6 +63,7 @@ class AddInfo(webapp2.RequestHandler):
     def post(self):
         information_key = ndb.Key('Information', self.request.get('name'))
         information = information_key.get()
+        name = 'empty'
         if not information:
             information = Information(name = self.request.get('name'),
                                       street = self.request.get('street'),
