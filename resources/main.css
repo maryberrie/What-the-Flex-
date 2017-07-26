@@ -10,7 +10,6 @@
   z-index:2;
   text-shadow: 5px 5px 10px #47889E;
   font-weight: 600;
-
 }
 h1 .transbox {
   margin: 1px;
@@ -18,12 +17,13 @@ h1 .transbox {
   padding-top: 10px;
   border: none;
   border-radius: 1000px;
-  width: 300px;
+  width: 100px;
   box-shadow: 10px 10px 5px #47889E;
+}
 
 p {
   font-family: sans-serif;
-  font-size: 14pt;
+  font-size: 17pt;
   text-align: left;
   word-wrap: break-word;
   word-spacing: 5px;
