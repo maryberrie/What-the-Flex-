@@ -58,7 +58,6 @@ class InformationPage(webapp2.RequestHandler):
             template = env.get_template('form.html')
             self.response.out.write(template.render())
 
-
 class AddInfo(webapp2.RequestHandler):
     def post(self):
         information_key = ndb.Key('Information', self.request.get('name'))
@@ -81,9 +80,7 @@ class AddInfo(webapp2.RequestHandler):
 
         information.key = information_key
         information.put()
-
-        self.redirect('/poro')
-
+        self.redirect('/companion')
 
 
 
