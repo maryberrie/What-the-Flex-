@@ -18,6 +18,10 @@ class Information(ndb.Model):
     state = ndb.StringProperty()
     zipcode = ndb.IntegerProperty()
     phonenumber = ndb.IntegerProperty()
+    kids = ndb.StringProperty()
+    job = ndb.StringProperty()
+    family = ndb.StringProperty()
+    code = ndb.StringProperty()
 
 class Begin(webapp2.RequestHandler):
     def get(self):
@@ -57,19 +61,29 @@ class InformationPage(webapp2.RequestHandler):
         else:
             template = env.get_template('form.html')
             self.response.out.write(template.render())
-
-class AddInfo(webapp2.RequestHandler):
     def post(self):
         information_key = ndb.Key('Information', self.request.get('name'))
         information = information_key.get()
         if not information:
+            if "kids" == "yes":
+                information = Information(kids = "Yes")
+            if "job" == "yes":
+                information = Information(job = "Yes")
+            if "family" == "yes":
+                information = Information(family = "Yes")
+            if "code" == "dog":
+                information = Information(code = "The Dog Century")
+            if "code" == "daycare":
+                information = Information(code = "Daycare Playcare")
+            if "code" == "shop":
+                information = Information(code = "Whole Veggies")
             information = Information(name = self.request.get('name'),
-                                      street = self.request.get('street'),
-                                      city = self.request.get('city'),
-                                      state = self.request.get('state'),
-                                      zipcode = long(self.request.get('zipcode')),
-                                      phonenumber = long(self.request.get('number'))
-                                      )
+                                    street = self.request.get('street'),
+                                    city = self.request.get('city'),
+                                    state = self.request.get('state'),
+                                    zipcode = long(self.request.get('zipcode')),
+                                    phonenumber = long(self.request.get('number')),
+                                    )
         """else:
             information.name = self.request.get('name')
             information.street = self.request.get('street')
@@ -92,5 +106,4 @@ app = webapp2.WSGIApplication([
         ('/tree', Tree),
         ('/poro', InformationPage),
         ('/companion', Companion),
-        ('/porosave', AddInfo)
 ], debug = True)
