@@ -1,10 +1,15 @@
 .birds h1{
+  color: #004d99;
   font-weight:bold;
   padding-top: 60px;
   text-align: center;
   font-family:fantasy;
-  font-size: 24pt;
+  font-size: 30pt;
   white-space: nowrap;
+  position:absolute;
+  z-index:2;
+  text-shadow: 10px 10px 20px cyan;
+  font-weight: 600;
 
 }
 
@@ -19,11 +24,13 @@ p, form {
 }
 .transbox {
     margin: 30px;
+    width: 1200px;
     padding-top:50px;
     padding-bottom: 100px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid black;
     z-index:1;
+    position: center;
 }
 
 img{
@@ -38,12 +45,14 @@ img{
   padding: 10px;
   margin: 10px;
   justify-content: center;
+  z-index:1;
 }
 
 body{
   background-image: url("background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: 100% 100%;
   padding-left: 200px;
   padding-right: 200px;
   z-index: 1;
