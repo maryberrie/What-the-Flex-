@@ -10,7 +10,7 @@
 
     {% include "form.html" %}
 
-    <form method="post" action="/porosave" id  = "survey">
+    <form method="post" action="/porosave" onsubmit = "moveOn()">
 
 
       <p>
@@ -28,7 +28,7 @@
             <input type="text" name="number" required/>
       </p>
             <input type="submit" id = "replace" name="submit"/>
-            <button id = "replace" onclick="window.location.replace('/poro')">Reset</button> 
+            <button id = "replace" onclick="window.location.replace('/poro')">Reset</button>
     </form>
 
   </body>
