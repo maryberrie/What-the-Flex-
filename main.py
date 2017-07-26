@@ -18,6 +18,10 @@ class Information(ndb.Model):
     state = ndb.StringProperty()
     zipcode = ndb.IntegerProperty()
     phonenumber = ndb.IntegerProperty()
+    kids = ndb.StringProperty()
+    job = ndb.StringProperty()
+    family = ndb.StringProperty()
+    code = ndb.StringProperty()
 
 class Begin(webapp2.RequestHandler):
     def get(self):
@@ -51,25 +55,54 @@ class Companion(webapp2.RequestHandler):
 
 class InformationPage(webapp2.RequestHandler):
     def get(self):
-        if  self.request.get('Enter').lower() == 'butterfly':
-            template = env.get_template('page.html')
-            self.response.out.write(template.render())
-        else:
-            template = env.get_template('form.html')
-            self.response.out.write(template.render())
+        template = env.get_template('page.html')
+        self.response.out.write(template.render())
 
-class AddInfo(webapp2.RequestHandler):
     def post(self):
         information_key = ndb.Key('Information', self.request.get('name'))
         information = information_key.get()
         if not information:
-            information = Information(name = self.request.get('name'),
-                                      street = self.request.get('street'),
-                                      city = self.request.get('city'),
-                                      state = self.request.get('state'),
-                                      zipcode = long(self.request.get('zipcode')),
-                                      phonenumber = long(self.request.get('number'))
-                                      )
+
+            code = ""
+            kids = ""
+            job = ""
+            family = ""
+
+            if self.request.get("code") == "dog":
+                code = "The Dog Century"
+            if self.request.get("code") == "daycare":
+                code = "Daycare Playcare"
+            if self.request.get("code") == "shop":
+                code = "Whole Veggies"
+
+            if self.request.get("kids") == "yes":
+                kids = "Yes"
+            if self.request.get("kids") == "no":
+                kids = "No"
+
+            if self.request.get("job") == "yes":
+                job = "Yes"
+            if self.request.get("job") == "no":
+                job = "No"
+
+            if self.request.get("family") == "yes":
+                family = "Yes"
+            if self.request.get("family") == "no":
+                family = "No"
+
+            information = Information(code = code,
+                                        kids = kids,
+                                        job = job,
+                                        family = family,
+                                        name = self.request.get('name'),
+                                        street = self.request.get('street'),
+                                        city = self.request.get('city'),
+                                        state = self.request.get('state'),
+                                        zipcode = long(self.request.get('zipcode')),
+                                        phonenumber = long(self.request.get('number')),
+                                        )
+
+
         """else:
             information.name = self.request.get('name')
             information.street = self.request.get('street')
@@ -92,5 +125,4 @@ app = webapp2.WSGIApplication([
         ('/tree', Tree),
         ('/poro', InformationPage),
         ('/companion', Companion),
-        ('/porosave', AddInfo)
 ], debug = True)

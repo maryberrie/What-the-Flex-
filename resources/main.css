@@ -21,11 +21,7 @@ h1 .transbox {
   width: 300px;
   box-shadow: 10px 10px 5px #47889E;
 
-
-
-
-}
-p, form {
+p {
   font-family: sans-serif;
   font-size: 14pt;
   text-align: left;

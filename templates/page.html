@@ -3,17 +3,10 @@
     <title>Damsel in Distress</title>
     <link type="text/css" rel="stylesheet" href="../resources/main.css"</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<<<<<<< HEAD
-    <script src="main.js"></script>
-=======
     <script type = "text/javascript" src = "../resources/main.js"> </script>
-  <body>
->>>>>>> 22c70ca8d5f537e4975fc544a3e32c8f95fd1523
   </head>
   <body>
 
-<<<<<<< HEAD
 <!-- Header -->
     <section class="birds">
       <img src="../resources/birdheaderedit.png"><h1>Damsel in Distress</h1><img src="../resources/birdheaderedit.png">
@@ -31,13 +24,13 @@
           </p>
       </form>
 
-      <p><a href="2companion.html">Speak to the Poro</a></p>
+      <p><a href="/companion">Speak to the Poro</a></p>
 
-      <form method="post" action="/porosave" id  = "survey">
+      <form method="post" action="/poro" id  = "survey">
 
 
         <p>
-          Name:
+          Name (First Last):
               <input type="text" name="name"/><br>
           Street:
               <input type="text" name="street"/><br>
@@ -48,12 +41,25 @@
           Zip Code:
               <input type="text" name="zipcode"/><br>
           Phone Number:
-              <input type="text" name="number"/>
+              <input type="text" name="number"/><br>
+          Do you have a child?<br>
+              <input type="radio" name="kids" value="yes">Yes
+              <input type="radio" name="kids" value="no">No<br>
+          Do you have a job?<br>
+              <input type="radio" name="job" value="yes">Yes
+              <input type="radio" name="job" value="no">No<br>
+          Do you have family in the area?<br>
+              <input type="radio" name="family" value="yes">Yes
+              <input type="radio" name="family" value="no">No<br>
+          If we contact you, what do you want our code name to be?<br>
+              <input type="radio" name="code" value="dog">The Dog Century
+              <input type="radio" name="code" value="daycare">Daycare Playcare
+              <input type="radio" name="code" value="shop">Whole Veggies<br>
         </p>
-              <input type="submit" name="Submit Info"/>
-              <button onclick="window.location.href='/poro'">Reset</button>
-      </form>
+              <div align="center"><input type="submit" name="Submit Info"/></div></form>
+        <div align="center"><button onclick="window.location.href='/poro'">Leave Form</button></div>
     </section>
+<<<<<<< HEAD
 =======
     {% include "form.html" %}
     <form method="post" action="/porosave" id  = "survey">
@@ -78,5 +84,7 @@
     </form>
 
 >>>>>>> 22c70ca8d5f537e4975fc544a3e32c8f95fd1523
+=======
+>>>>>>> b8ff914de9a0dc132879b9b437e7994ed24c3343
   </body>
 </html>
