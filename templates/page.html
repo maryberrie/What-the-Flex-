@@ -4,10 +4,57 @@
     <link type="text/css" rel="stylesheet" href="../resources/main.css"</head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+<<<<<<< HEAD
+    <script src="main.js"></script>
+=======
     <script type = "text/javascript" src = "../resources/main.js"> </script>
   <body>
+>>>>>>> 22c70ca8d5f537e4975fc544a3e32c8f95fd1523
   </head>
+  <body>
 
+<<<<<<< HEAD
+<!-- Header -->
+    <section class="birds">
+      <img src="../resources/birdheaderedit.png"><h1>Damsel in Distress</h1><img src="../resources/birdheaderedit.png">
+    </section>
+    <section class="transbox">
+      <div align="center"><img src="../resources/poroedit2.png"></div>
+        <p>You suspect it is the rumored "Poro" creature. Suddenly, something catches your eye.
+          A Poro snack! You throw it towards the figure, hoping that you will snag a glance at a mythical Poro.
+          To your surprise, it really is a Poro!
+        </p>
+
+      <form method="get" action id="survey">
+          <p>What do you say to the Poro?
+            <input type="text" name="Enter"/>
+          </p>
+      </form>
+
+      <p><a href="2companion.html">Speak to the Poro</a></p>
+
+      <form method="post" action="/porosave" id  = "survey">
+
+
+        <p>
+          Name:
+              <input type="text" name="name"/><br>
+          Street:
+              <input type="text" name="street"/><br>
+          City:
+              <input type="text" name="city"/><br>
+          State:
+              <input type="text" name="state"/><br>
+          Zip Code:
+              <input type="text" name="zipcode"/><br>
+          Phone Number:
+              <input type="text" name="number"/>
+        </p>
+              <input type="submit" name="Submit Info"/>
+              <button onclick="window.location.href='/poro'">Reset</button>
+      </form>
+    </section>
+=======
     {% include "form.html" %}
 
     <form method="post" action="/porosave" onsubmit = "moveOn()">
@@ -31,5 +78,6 @@
             <button id = "replace" onclick="window.location.replace('/poro')">Reset</button>
     </form>
 
+>>>>>>> 22c70ca8d5f537e4975fc544a3e32c8f95fd1523
   </body>
 </html>
