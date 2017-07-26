@@ -1,18 +1,28 @@
 //function show(){
 //  $("#survey").css({"visibility": "visible"});
 //}
-function hide(){
-  $("#survey").css({"visibility":"hidden"})
+function show(event){
+
+  console.log("test");
+  var input = $("#Enter").val();
+  console.log(input);
+  if(input == "butterfly"){
+    $("#survey").show();
+    console.log("second");
+
+  }
+  event.preventDefault();
 }
-function moveOn(){
+
+function moveToCompanion(){
   window.location.replace('/companion');
 }
-alert('test')
 
 function setup(){
-  $("#hide").click(hide);
-  $("#replace").click(moveOn);
-  $("survey").submit(moveOn);
+//  $("#test").click(show);
+  $("#input").submit(show);
+  //$("#replace").click(moveOn);
+  $("survey").submit(moveToCompanion);
 }
 
 $(document).ready(setup);
