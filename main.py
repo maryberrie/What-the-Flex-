@@ -80,9 +80,7 @@ class AddInfo(webapp2.RequestHandler):
 
         information.key = information_key
         information.put()
-
-        self.redirect('/poro')
-
+        self.redirect('/companion')
 
 
 
