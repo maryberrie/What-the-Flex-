@@ -51,7 +51,7 @@ body .transbox {
 }
 
 img{
-  max-width: 680px;
+  max-height: 400px;
 
 }
 
@@ -91,7 +91,9 @@ body{
   bottom: 100px;
   z-index: 1;
 }
-
+#home:hover{
+  background-color: white;
+}
 
 a, a:visited{
      color: blue;
