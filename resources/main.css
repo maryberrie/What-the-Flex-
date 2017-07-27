@@ -75,14 +75,17 @@ body{
   z-index: 1;
 }
 
-#rabbit {
+#rabbit img {
+  width: 350px;
+  height: auto;
   position: fixed;
   left: 0px;
   bottom: 150px;
 }
 
-#deer {
+#deer img {
+  max-height: 300px;
   position: fixed;
-  left: 1000px;
+  left: 1070px;
   bottom: 50px;
 }
