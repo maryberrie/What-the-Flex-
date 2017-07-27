@@ -91,7 +91,9 @@ body{
   bottom: 150px;
   z-index: 1;
 }
-
+#home:hover{
+  background-color: white;
+}
 
 a, a:visited{
      color: blue;
