@@ -24,7 +24,7 @@ function setup(){
   $("#input").submit(show);
   //$("#replace").click(moveOn);
   $("survey").submit(moveToCompanion);
-  $("#goBack").click(goBack);
+  $("#rabbit").click(goBack);
 }
 
 $(document).ready(setup);
