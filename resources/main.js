@@ -7,9 +7,9 @@ function show(event){
     $("#survey").show();
     event.preventDefault();
   }else{
-    
+    window.location.replace('/companion');
+    event.preventDefault();
   }
-
 }
 
 function moveToCompanion(){

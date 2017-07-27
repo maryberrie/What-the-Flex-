@@ -9,7 +9,7 @@
 
 <!-- Header -->
     <section class="birds">
-      <img src="../resources/birdheaderedit.png"><h1>Damsel in Distress</h1><img src="../resources/birdheaderedit.png">
+      <img src="../resources/flyingbirds2.gif"><h1><section class="transbox">Damsel in Distress</section></h1><img src="../resources/flyingbirds2.gif">
     </section>
     <section class="transbox">
       <div align="center"><img src="../resources/poroedit2.png"></div>
@@ -20,7 +20,8 @@
 
       <form method="get" id ="input">
           <p>What do you say to the Poro?
-            <input type="text" id="Enter"/>
+            <input type="text" id="Enter"/><br><br>
+            <a href="/companion">Speak to the Poro</a>
           </p>
       </form>
 
@@ -29,15 +30,15 @@
 
         <p>
           Name (First Last):
-              <input type="text" name="name"/><br>
+              <input type="text" name="name" required/><br>
           Street:
-              <input type="text" name="street"/><br>
+              <input type="text" name="street" /><br>
           City:
-              <input type="text" name="city"/><br>
+              <input type="text" name="city" /><br>
           State:
-              <input type="text" name="state"/><br>
+              <input type="text" name="state" /><br>
           Zip Code:
-              <input type="text" name="zipcode"/><br>
+              <input type="text" name="zipcode" /><br>
           Phone Number:
               <input type="text" name="number"/><br>
           Do you have a child?<br>
@@ -54,9 +55,13 @@
               <input type="radio" name="code" value="daycare">Daycare Playcare
               <input type="radio" name="code" value="shop">Whole Veggies<br>
         </p>
+              <div align="center"><input type="submit" name="Submit Info"/></div><br>
               <div align="center"><button onclick="window.location.href='/poro'">Leave Form</button></div>
-              <div align="center"><input type="submit" name="Submit Info"/></div></form>
+      </form>
 
+<!-- Footer -->
+      <div id="deer"><img src="../resources/deer.gif"></div>
+      <div id="rabbit"><img src="../resources/flyrabbit.gif"></div>
     </section>
   </body>
 </html>
