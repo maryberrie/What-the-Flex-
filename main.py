@@ -113,6 +113,16 @@ class DrinkEscape(webapp2.RequestHandler):
         template = env.get_template('6drinkescape.html')
         self.response.out.write(template.render())
 
+class Stone(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('6stone.html')
+        self.response.out.write(template.render())
+
+class NoStone(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('6nostone.html')
+        self.response.out.write(template.render())
+
 class InformationPage(webapp2.RequestHandler):
     def get(self):
         template = env.get_template('page.html')
@@ -255,4 +265,6 @@ app = webapp2.WSGIApplication([
         ('/cave', Cave),
         ('/field', Field),
         ('/drinkescape', DrinkEscape),
+        ('/stone', Stone),
+        ('/nostone', NoStone),
 ], debug = True)
