@@ -143,6 +143,11 @@ class StickEscape(webapp2.RequestHandler):
         template = env.get_template('8stickescape.html')
         self.response.out.write(template.render())
 
+class Help(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('helppage.html')
+        self.response.out.write(template.render())
+
 class InformationPage(webapp2.RequestHandler):
     def get(self):
         template = env.get_template('page.html')
@@ -291,4 +296,5 @@ app = webapp2.WSGIApplication([
         ('/attackescape', AttackEscape),
         ('/powerescape', PowerEscape),
         ('/stickescape', StickEscape),
+        ('/helppage', Help)
 ], debug = True)
