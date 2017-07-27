@@ -15,12 +15,16 @@ function show(event){
 function moveToCompanion(){
   window.location.href = "/companionsunshine";
 }
+function goBack() {
+    window.history.back();
+}
 
 function setup(){
 //  $("#test").click(show);
   $("#input").submit(show);
   //$("#replace").click(moveOn);
   $("survey").submit(moveToCompanion);
+  $("#goBack").click(goBack);
 }
 
 $(document).ready(setup);
