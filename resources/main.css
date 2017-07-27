@@ -77,17 +77,17 @@ body{
 }
 
 #rabbit img {
-  width: 350px;
+  width: 200px;
   height: auto;
   position: fixed;
-  left: 0px;
+  left: 20px;
   bottom: 150px;
 }
 
 #deer img {
-  max-height: 300px;
+  max-height: 250px;
   position: fixed;
-  left: 1070px;
+  left: 1300px;
   bottom: 150px;
   z-index: 1;
 }
