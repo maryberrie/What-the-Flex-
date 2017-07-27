@@ -123,6 +123,26 @@ class NoStone(webapp2.RequestHandler):
         template = env.get_template('6nostone.html')
         self.response.out.write(template.render())
 
+class Stick(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('7stickattack.html')
+        self.response.out.write(template.render())
+
+class AttackEscape(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('7attackescape.html')
+        self.response.out.write(template.render())
+
+class PowerEscape(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('7powerescape.html')
+        self.response.out.write(template.render())
+
+class StickEscape(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template('8stickescape.html')
+        self.response.out.write(template.render())
+
 class InformationPage(webapp2.RequestHandler):
     def get(self):
         template = env.get_template('page.html')
@@ -267,4 +287,8 @@ app = webapp2.WSGIApplication([
         ('/drinkescape', DrinkEscape),
         ('/stone', Stone),
         ('/nostone', NoStone),
+        ('/stick', Stick),
+        ('/attackescape', AttackEscape),
+        ('/powerescape', PowerEscape),
+        ('/stickescape', StickEscape),
 ], debug = True)
