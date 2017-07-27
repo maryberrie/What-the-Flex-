@@ -39,7 +39,6 @@ p {
   display: none;
 }
 body .transbox {
-    margin: 30px;
     min-width: 1000px;
     padding-top:50px;
     padding-bottom: 100px;
@@ -48,6 +47,7 @@ body .transbox {
     border-radius: 50px;
     z-index:1;
     position: static;
+    justify-content:center;
 }
 
 img{
@@ -71,8 +71,9 @@ body{
   background-attachment: fixed;
   background-size: 100% 100%;
   padding-left: 200px;
-  padding-right: 200px;
+  padding-right: 100px;
   z-index: 1;
+  margin: 50px
 }
 
 #rabbit img {
@@ -87,7 +88,11 @@ body{
   max-height: 300px;
   position: fixed;
   left: 1070px;
-  bottom: 50px;
+  bottom: 150px;
+  z-index: 1;
+}
+#deer p {
+  z-index:2;
 }
 
 a, a:visited{
