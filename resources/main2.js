@@ -7,13 +7,16 @@ function show(event){
     $("#survey").show();
     event.preventDefault();
   }else{
-    window.location.replace('/companionsunshine');
+    window.location.href = "/companionsunshine";
     event.preventDefault();
   }
 }
 
 function moveToCompanion(){
-  window.location.replace('/companionsunshine');
+  window.location.href = "/companionsunshine";
+}
+function goBack() {
+    window.history.back();
 }
 
 function setup(){
@@ -21,6 +24,7 @@ function setup(){
   $("#input").submit(show);
   //$("#replace").click(moveOn);
   $("survey").submit(moveToCompanion);
+  $("#goBack").click(goBack);
 }
 
 $(document).ready(setup);
