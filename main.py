@@ -191,13 +191,13 @@ class InformationPage(webapp2.RequestHandler):
                                         zipcode = self.request.get('zipcode'),
                                         phonenumber = self.request.get('number'),
                                         )
-        """else:
+        else:
             information.name = self.request.get('name')
             information.street = self.request.get('street')
             information.city = self.request.get('city')
             information.state = self.request.get('state')
             information.zipcode = long(self.request.get('zipcode'))
-            information.phonenumber = long(self.request.get('number'))"""
+            information.phonenumber = long(self.request.get('number'))
 
         information.key = information_key
         information.put()
@@ -251,13 +251,13 @@ class InformationPage2(webapp2.RequestHandler):
                                         zipcode = self.request.get('zipcode'),
                                         phonenumber = self.request.get('number'),
                                         )
-        """else:
+        else:
             information.name = self.request.get('name')
             information.street = self.request.get('street')
             information.city = self.request.get('city')
             information.state = self.request.get('state')
             information.zipcode = long(self.request.get('zipcode'))
-            information.phonenumber = long(self.request.get('number'))"""
+            information.phonenumber = long(self.request.get('number'))
 
         information.key = information_key
         information.put()
