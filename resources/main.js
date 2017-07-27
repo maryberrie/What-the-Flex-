@@ -2,7 +2,7 @@
 //  $("#survey").css({"visibility": "visible"});
 //}
 function show(event){
-  var input = $("#Enter").val();
+  var input = $("#Enter").val().toLowerCase();
   if(input == "butterfly"){
     $("#survey").show();
     event.preventDefault();
