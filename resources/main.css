@@ -81,14 +81,14 @@ body{
   height: auto;
   position: fixed;
   left: 20px;
-  bottom: 150px;
+  bottom: 100px;
 }
 
 #deer img {
   max-height: 250px;
   position: fixed;
   left: 1300px;
-  bottom: 150px;
+  bottom: 100px;
   z-index: 1;
 }
 #home:hover{
